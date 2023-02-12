@@ -9,7 +9,7 @@ const data = require('./coords.json')
 function App() {
   return (
     <Wrapper apiKey={"AIzaSyDJ9421MXFa_SDtRbnmrWJd_34Xg5cmgrM"}>
-      <MyMapComponent center={{lng: -84.4976, lat: 38.05747}} zoom={14} />
+      <MyMapComponent center={{lng: -84.48, lat: 38.055}} zoom={18} />
     </Wrapper>
   );
 }
@@ -23,9 +23,26 @@ function MyMapComponent({ center, zoom }) {
       zoom,
     })
     newMap.data.loadGeoJson('/york.geojson')
-    newMap.data.setStyle({
-      fillColor: 'green',
-      strokeWeight: 1
+    newMap.data.setStyle(function(feature) {
+      const streetNumber = feature.getProperty('NUM1');
+      let color;
+      switch (streetNumber) {
+        case '114':
+        case '104':
+        case '106':
+        case '108':
+        case '110':
+        case '112':
+          color = 'red'; //marty clifford april 2013 buy
+          break;
+        default:
+          color = 'blue'
+      }
+      console.log(streetNumber, color)
+      return {
+        fillColor: color,
+        strokeWeight: 1
+      };
     })
     setMap(newMap);
   }, [center, zoom]);
