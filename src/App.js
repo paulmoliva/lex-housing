@@ -209,7 +209,7 @@ function MyMapComponent({ center, zoom }) {
   return (
     <>
       <header style={{display: 'flex', flexDirection: 'row', height: '5vh', width: '100vw', zIndex: 99, position: 'fixed', top: 0}}>
-        <button style={{width: '50%'}} onClick={goToPrev}>Prev</button>
+        <button style={{width: '50%'}} onClick={goToPrev} disabled={propertyIndex === 0}>Prev</button>
         <button style={{width: '50%'}} onClick={goToNext}>Next</button>
       </header>
       <div style={{ height: '90vh', width: '100vw', marginTop: '4vh' }} ref={ref} id="map" />
