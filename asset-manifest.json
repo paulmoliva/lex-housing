@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/lex-housing/static/css/main.073c9b0a.css",
-    "main.js": "/lex-housing/static/js/main.39874710.js",
+    "main.js": "/lex-housing/static/js/main.252a2d50.js",
     "static/js/787.1f475641.chunk.js": "/lex-housing/static/js/787.1f475641.chunk.js",
     "index.html": "/lex-housing/index.html",
     "main.073c9b0a.css.map": "/lex-housing/static/css/main.073c9b0a.css.map",
-    "main.39874710.js.map": "/lex-housing/static/js/main.39874710.js.map",
+    "main.252a2d50.js.map": "/lex-housing/static/js/main.252a2d50.js.map",
     "787.1f475641.chunk.js.map": "/lex-housing/static/js/787.1f475641.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.39874710.js"
+    "static/js/main.252a2d50.js"
   ]
 }
