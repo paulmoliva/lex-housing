@@ -3,6 +3,7 @@ import { Wrapper } from "@googlemaps/react-wrapper";
 import './App.css';
 import {useEffect, useRef, useState} from "react";
 const data = require('./coords.json')
+const cameras = require('./cameras.json')
 
 
 
@@ -72,6 +73,13 @@ function MyMapComponent({ center, zoom }) {
         fillOpacity: 0.35
       });
       myPolygon.setMap(map);
+    })
+    cameras.map(({lat, lng}) => {
+      const myCamera = new window.google.maps.Marker({
+        position: {lat, lng},
+        map,
+        title: "Flock License Plate Reader",
+      });
     })
   }, [map])
 
